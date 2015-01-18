@@ -1,0 +1,22 @@
+{{!-- <h1>Friends Index</h1>
+<h2>Friends: {{length}}</h2> --}}
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Articles</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td>{{link-to fullName 'friends.show' this}}</td>
+        <td>{{totalArticles}}</td>
+        <td><a href="#" {{action "delete" this}}>Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{!-- <h4>{{link-to 'Create a New Friend' 'friends.new'}}</h4> --}}
+
